@@ -68,7 +68,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.DMaendeleo'
             artifactId = 'ImageCarousel'
-            version = '1.0.1'
+            version = '1.0.3'
 
             afterEvaluate {
                 from components.release
