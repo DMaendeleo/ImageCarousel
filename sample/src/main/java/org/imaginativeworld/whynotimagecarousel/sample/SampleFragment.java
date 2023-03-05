@@ -159,13 +159,16 @@ public class SampleFragment extends Fragment {
         headers.put("header_key", "header_value");
 
         int index = 1;
-        for (String item : DataSet.INSTANCE.getOne()) {
+        for (Integer item : DataSet.INSTANCE.getOne()) {
             list.add(
-                    new CarouselItem(
-                            item,
-                            "Image " + index++ + " of " + DataSet.INSTANCE.getOne().size(),
-                            headers
-                    )
+//                    new CarouselItem(
+//                            item,
+//                            "Image " + index++ + " of " + DataSet.INSTANCE.getOne().size(),
+//                            headers
+//                    )
+                   new CarouselItem(
+                            item
+                            )
             );
         }
 

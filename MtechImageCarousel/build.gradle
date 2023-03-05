@@ -62,3 +62,18 @@ dependencies {
     // Circle Indicator
     implementation 'me.relex:circleindicator:2.1.6'
 }
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.DMaendeleo'
+            artifactId = 'ImageCarousel'
+            version = '1.0.1'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+}
+

@@ -28,10 +28,14 @@ class TestActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listOne.add(
-                CarouselItem(
-                    imageUrl = item,
-                    caption = "Image ${index + 1} of ${DataSet.one.size}",
-                )
+//                CarouselItem(
+//                    imageUrl = item,
+//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+//                )
+
+                        CarouselItem(
+                         item,
+            )
             )
         }
 
@@ -41,10 +45,13 @@ class TestActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listTwo.add(
-                CarouselItem(
-                    imageUrl = item,
-                    caption = "Image ${index + 1} of ${DataSet.one.size}",
-                )
+//                CarouselItem(
+//                    imageUrl = item,
+//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+//                )
+                        CarouselItem(
+                        item,
+            )
             )
         }
 
@@ -81,10 +88,13 @@ class TestActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listThree.add(
-                CarouselItem(
-                    imageUrl = item,
-                    caption = "Image ${index + 1} of ${DataSet.one.size}",
-                )
+//                CarouselItem(
+//                    imageUrl = item,
+//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+//                )
+                        CarouselItem(
+                        item,
+            )
             )
         }
 
@@ -121,9 +131,12 @@ class TestActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listFour.add(
+//                CarouselItem(
+//                    imageUrl = item,
+//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+//                )
                 CarouselItem(
-                    imageUrl = item,
-                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+                    item,
                 )
             )
         }

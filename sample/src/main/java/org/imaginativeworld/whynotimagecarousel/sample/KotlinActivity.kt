@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
@@ -14,21 +15,16 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import kotlin.random.Random
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselOnScrollListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselGravity
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import org.imaginativeworld.whynotimagecarousel.model.CarouselType
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ActivityKotlinBinding
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ItemCustomFixedSizeLayout1Binding
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ItemCustomFixedSizeLayout2Binding
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ItemCustomFixedSizeLayout3Binding
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ItemCustomFixedSizeLayout4Binding
-import org.imaginativeworld.whynotimagecarousel.sample.databinding.ItemCustomFixedSizeLayout5Binding
+import org.imaginativeworld.whynotimagecarousel.sample.databinding.*
 import org.imaginativeworld.whynotimagecarousel.utils.dpToPx
 import org.imaginativeworld.whynotimagecarousel.utils.setImage
 import org.imaginativeworld.whynotimagecarousel.utils.spToPx
+import kotlin.random.Random
 
 class KotlinActivity : AppCompatActivity() {
 
@@ -56,8 +52,11 @@ class KotlinActivity : AppCompatActivity() {
         // Example One: All methods/attributes & header
         // ----------------------------------------------------------------
 
+
         binding.carousel1.apply {
             registerLifecycle(lifecycle)
+
+            // this.layoutParams.height = viewGroup.width / 3 - 10
 
             showTopShadow = true
             topShadowAlpha = 0.15f // 0 to 1, 1 means 100%
@@ -99,7 +98,7 @@ class KotlinActivity : AppCompatActivity() {
             nextButtonId = org.imaginativeworld.whynotimagecarousel.R.id.btn_next
             nextButtonMargin = 4.dpToPx(context) // px value of dp
 
-            carouselType = CarouselType.BLOCK
+                carouselType = CarouselType.SHOWCASE
 
             carouselGravity = CarouselGravity.CENTER
 
@@ -140,11 +139,13 @@ class KotlinActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listOne.add(
-                CarouselItem(
-                    imageUrl = item,
-                    caption = "Image ${index + 1} of ${DataSet.one.size}",
-                    headers = headers
-                )
+//                CarouselItem(
+//                    imageUrl = item,
+//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+//                    headers = headers
+//                )
+
+                        CarouselItem(item)
             )
         }
 

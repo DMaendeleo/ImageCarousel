@@ -23,11 +23,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.SnapHelper
+import androidx.recyclerview.widget.*
 import me.relex.circleindicator.CircleIndicator2
 import org.imaginativeworld.whynotimagecarousel.adapter.FiniteCarouselAdapter
 import org.imaginativeworld.whynotimagecarousel.adapter.InfiniteCarouselAdapter
@@ -36,15 +32,19 @@ import org.imaginativeworld.whynotimagecarousel.listener.CarouselOnScrollListene
 import org.imaginativeworld.whynotimagecarousel.model.CarouselGravity
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import org.imaginativeworld.whynotimagecarousel.model.CarouselType
-import org.imaginativeworld.whynotimagecarousel.utils.CarouselLinearLayoutManager
-import org.imaginativeworld.whynotimagecarousel.utils.LinearStartSnapHelper
-import org.imaginativeworld.whynotimagecarousel.utils.dpToPx
-import org.imaginativeworld.whynotimagecarousel.utils.getSnapPosition
-import org.imaginativeworld.whynotimagecarousel.utils.spToPx
+import org.imaginativeworld.whynotimagecarousel.utils.*
 import org.jetbrains.annotations.NotNull
 import org.jetbrains.annotations.Nullable
 
-class ImageCarousel(
+class ddd( context: Context,
+           attributeSet: AttributeSet?
+): ImageCarousel(context = context, attributeSet) {
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
+}
+
+open class ImageCarousel(
     @NotNull context: Context,
     @Nullable private var attributeSet: AttributeSet?
 ) : ConstraintLayout(context, attributeSet), DefaultLifecycleObserver {
@@ -54,9 +54,15 @@ class ImageCarousel(
         const val NO_POSITION = RecyclerView.NO_POSITION
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val meters = MeasureSpec.getSize(widthMeasureSpec)
+        val height = meters/3
+         setMeasuredDimension(widthMeasureSpec, height)
+    }
+
     private var adapter: FiniteCarouselAdapter? = null
 
-    private val scaleTypeArray = arrayOf(
+    private val scaleTypeArray = arrayOf (
         ImageView.ScaleType.MATRIX,
         ImageView.ScaleType.FIT_XY,
         ImageView.ScaleType.FIT_START,
