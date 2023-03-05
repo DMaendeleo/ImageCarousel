@@ -2,19 +2,13 @@ package org.imaginativeworld.whynotimagecarousel.sample
 
 object DataSet {
     val one = listOf(
-        R.drawable.image_1 ,
-        R.drawable.image_2,
-        R.drawable.image_3,
-        R.drawable.image_4,
-        R.drawable.image_5,
-        R.drawable.image_6 ,
-//        "https://images.unsplash.com/photo-1513072064285-240f87fa81e8?w=720",
-//        "https://images.unsplash.com/photo-1540866225557-9e4c58100c67?w=720",
-//        "https://images.unsplash.com/photo-1573322867455-fc97c490c14c?w=720",
-//        "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=720",
-//        "https://images.unsplash.com/photo-1581357825340-32259110788a?w=720",
-//        "https://images.unsplash.com/photo-1581441117193-63e8f6547081?w=720",
-//        "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=720",
+        "https://images.unsplash.com/photo-1513072064285-240f87fa81e8?w=1080",
+        "https://images.unsplash.com/photo-1540866225557-9e4c58100c67?w=1080",
+        "https://images.unsplash.com/photo-1573322867455-fc97c490c14c?w=1080",
+        "https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1080",
+        "https://images.unsplash.com/photo-1581357825340-32259110788a?w=1080",
+        "https://images.unsplash.com/photo-1581441117193-63e8f6547081?w=1080",
+        "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1080",
     )
 
     val two = listOf(

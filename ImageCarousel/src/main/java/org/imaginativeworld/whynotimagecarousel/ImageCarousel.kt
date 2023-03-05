@@ -36,13 +36,6 @@ import org.imaginativeworld.whynotimagecarousel.utils.*
 import org.jetbrains.annotations.NotNull
 import org.jetbrains.annotations.Nullable
 
-class ddd( context: Context,
-           attributeSet: AttributeSet?
-): ImageCarousel(context = context, attributeSet) {
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-    }
-}
 
 open class ImageCarousel(
     @NotNull context: Context,
@@ -55,9 +48,19 @@ open class ImageCarousel(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+
+
+
         val meters = MeasureSpec.getSize(widthMeasureSpec)
+        val metersMode = MeasureSpec.getMode(widthMeasureSpec)
+        val metersModeH = MeasureSpec.getMode(heightMeasureSpec)
         val height = meters/3
-         setMeasuredDimension(widthMeasureSpec, height)
+
+        val desiredHSpec = MeasureSpec.makeMeasureSpec(height, metersModeH);
+        val desiredWSpec = MeasureSpec.makeMeasureSpec(meters, metersMode);
+        // setMeasuredDimension(widthMeasureSpec, desiredHSpec);
+
+        super.onMeasure(widthMeasureSpec, desiredHSpec)
     }
 
     private var adapter: FiniteCarouselAdapter? = null

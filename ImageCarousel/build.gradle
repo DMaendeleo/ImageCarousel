@@ -70,24 +70,9 @@ afterEvaluate {
 
                 groupId = 'com.github.DMaendeleo'
                 artifactId = 'ImageCarousel'
-                version = '1.0.5'
+                version = '1.0.6'
             }
         }
     }
 }
-
-//publishing {
-//    publications {
-//        release(MavenPublication) {
-//            from components.release
-//            groupId = 'com.github.DMaendeleo'
-//            artifactId = 'ImageCarousel'
-//            version = '1.0.4'
-////            afterEvaluate {
-////                from components.release
-////            }
-//        }
-//    }
-//}
-
 

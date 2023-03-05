@@ -139,13 +139,11 @@ class KotlinActivity : AppCompatActivity() {
 
         for ((index, item) in DataSet.one.withIndex()) {
             listOne.add(
-//                CarouselItem(
-//                    imageUrl = item,
-//                    caption = "Image ${index + 1} of ${DataSet.one.size}",
-//                    headers = headers
-//                )
-
-                        CarouselItem(item)
+                CarouselItem(
+                    imageUrl = item,
+                    caption = "Image ${index + 1} of ${DataSet.one.size}",
+                    headers = headers
+                )
             )
         }
 
