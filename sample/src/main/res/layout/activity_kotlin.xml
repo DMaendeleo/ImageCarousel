@@ -23,10 +23,10 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        <com.maendeltechnologies.imageCarousel.ImageCarousel
             android:id="@+id/carousel1"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="200dp"
             app:autoPlay="true"
             app:autoPlayDelay="3000" />
 
@@ -65,10 +65,10 @@
                     android:layout_marginBottom="8dp"
                     android:orientation="horizontal">
 
-                    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    <com.maendeltechnologies.imageCarousel.ImageCarousel
                         android:id="@+id/carousel2"
                         android:layout_width="0dp"
-                        android:layout_height="150dp"
+                        android:layout_height="0dp"
                         android:layout_marginStart="0dp"
                         android:layout_weight="1"
                         app:carouselBackground="@android:color/transparent"
@@ -168,7 +168,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            <com.maendeltechnologies.imageCarousel.ImageCarousel
                 android:id="@+id/carousel3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -287,7 +287,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            <com.maendeltechnologies.imageCarousel.ImageCarousel
                 android:id="@+id/carousel4"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -322,7 +322,7 @@
             android:text="@string/lorem_ipsum_2"
             android:textSize="14sp" />
 
-        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        <com.maendeltechnologies.imageCarousel.ImageCarousel
             android:id="@+id/carousel5"
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -365,7 +365,7 @@
             android:text="@string/lorem_ipsum_2"
             android:textSize="14sp" />
 
-        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        <com.maendeltechnologies.imageCarousel.ImageCarousel
             android:id="@+id/carousel6"
             android:layout_width="match_parent"
             android:layout_height="160dp"

@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#eee"
-        tools:context=".SampleFragment">
+        tools:context="com.maendeltechnologies.sampleImageCarousel.sample.SampleFragment">
 
         <TextView
             android:id="@+id/tv_caption"
@@ -31,7 +31,7 @@
             app:layout_constraintDimensionRatio="3:2"
             app:layout_constraintTop_toBottomOf="@+id/tv_caption">
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            <com.maendeltechnologies.imageCarousel.ImageCarousel
                 android:id="@+id/carousel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />

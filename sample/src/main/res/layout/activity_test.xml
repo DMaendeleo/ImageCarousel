@@ -7,13 +7,13 @@
     android:orientation="vertical"
     tools:context=".TestActivity">
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+    <com.maendeltechnologies.imageCarousel.ImageCarousel
         android:id="@+id/carousel1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+    <com.maendeltechnologies.imageCarousel.ImageCarousel
         android:id="@+id/carousel2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -21,7 +21,7 @@
         android:layout_weight="1"
         app:infiniteCarousel="false" />
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+    <com.maendeltechnologies.imageCarousel.ImageCarousel
         android:id="@+id/carousel3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -33,7 +33,7 @@
         app:showBottomShadow="false"
         app:showTopShadow="false" />
 
-    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+    <com.maendeltechnologies.imageCarousel.ImageCarousel
         android:id="@+id/carousel4"
         android:layout_width="match_parent"
         android:layout_height="0dp"

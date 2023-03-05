@@ -70,7 +70,7 @@ afterEvaluate {
 
                 groupId = 'com.github.DMaendeleo'
                 artifactId = 'ImageCarousel'
-                version = '1.0.6'
+                version = '1.0.7'
             }
         }
     }
