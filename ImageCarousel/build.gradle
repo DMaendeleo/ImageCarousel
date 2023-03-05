@@ -11,8 +11,6 @@ buildscript {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: "com.vanniktech.maven.publish"
-apply plugin: "org.jetbrains.dokka"
 apply plugin: 'maven-publish'
 
 android {
@@ -64,18 +62,32 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.DMaendeleo'
-            artifactId = 'ImageCarousel'
-            version = '1.0.4'
-//             from components.release
-            afterEvaluate {
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
                 from components.release
+
+                groupId = 'com.github.DMaendeleo'
+                artifactId = 'ImageCarousel'
+                version = '1.0.5'
             }
         }
     }
 }
+
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+//            from components.release
+//            groupId = 'com.github.DMaendeleo'
+//            artifactId = 'ImageCarousel'
+//            version = '1.0.4'
+////            afterEvaluate {
+////                from components.release
+////            }
+//        }
+//    }
+//}
 
 
