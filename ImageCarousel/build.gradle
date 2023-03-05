@@ -13,6 +13,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: "com.vanniktech.maven.publish"
 apply plugin: "org.jetbrains.dokka"
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 33
@@ -68,12 +69,13 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.DMaendeleo'
             artifactId = 'ImageCarousel'
-            version = '1.0.3'
-
+            version = '1.0.4'
+//             from components.release
             afterEvaluate {
                 from components.release
             }
         }
     }
 }
+
 
