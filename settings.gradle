@@ -1,2 +1,2 @@
-include ':MtechImageCarousel', ':sample'
+include ':ImageCarousel', ':sample'
 rootProject.name = 'ImageCarousel'
